@@ -1,0 +1,13 @@
+.jumbotron{
+    /* height: 400px; */
+    /* background: url("https://puppydogweb.com/wp-content/uploads/2015/05/54_2383_Cute-Puppies-puppies-16094619-1280-800.jpg"); */
+    background-size: cover;
+    background-position: 0 40%;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.8) 20%), url(../assets/cover.png);
+    /* padding: 5em inherit; */
+}
+
+body{
+    background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,0.6502976190476191) 0%, rgba(239,238,138,1) 100%);
+}
