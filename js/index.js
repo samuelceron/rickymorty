@@ -1,5 +1,5 @@
 // importamos el modulo para hacer las peticiones
-let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+// let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 // direccion de la API
 let api = 'https://rickandmortyapi.com/api/character/';
 
@@ -56,3 +56,14 @@ fetchData(api, (error1, data1) => {
     });
   });
 });
+
+function idgenerator(howmany){
+  var idlist = [];
+  for (let index = 0; index < howmany; index++) {
+    // console.log((Math.round(Math.random()*826)))
+    idlist.push((Math.round(Math.random()*826)))
+  }
+  console.log(idlist)
+}
+
+idgenerator(10);
