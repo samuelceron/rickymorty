@@ -3,11 +3,13 @@ import { buildCard } from "./cardGenerator.js";
 
 const api = 'https://rickandmortyapi.com/api/character/';
 
+
 //Callback
-fetchDataCallback(api, (error,data)=>{
+fetchDataCallback(idgenerator(200), (error,data)=>{
+  
   if(error) return console.error;
   console.log(data)
-  data.results.map(character =>{
+  data.map(character =>{
     const card = buildCard(character);
     cards_container.appendChild(card);
   })
@@ -48,13 +50,16 @@ fetchDataCallback(api, (error,data)=>{
 // });
 
 function idgenerator(howmany){
+  console.log("entro")
   var idlist = []
   for (let index = 0; index < howmany; index++) {
     // console.log((Math.round(Math.random()*826)))
     // console.log(howmany)
     idlist.push((Math.round(Math.random()*826)))
   }
-  // console.log(idlist)
+  let api_callback = api+idlist
+  console.log(api_callback);
+  return api_callback
 }
 
 idgenerator(10);
