@@ -1,13 +1,13 @@
 import { fetchDataCallback } from "./fetchDataCallback.js";
 import { buildCard } from "./cardGenerator.js";
 
-const api = 'https://rickandmortyapi.com/api/character/1,183';
+const api = 'https://rickandmortyapi.com/api/character/';
 
 //Callback
 fetchDataCallback(api, (error,data)=>{
   if(error) return console.error;
   console.log(data)
-  data.map(character =>{
+  data.results.map(character =>{
     const card = buildCard(character);
     cards_container.appendChild(card);
   })

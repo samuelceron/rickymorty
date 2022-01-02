@@ -3,7 +3,7 @@ export const buildCard = (character) => {
     // card.classList.add("card");
   
     card.innerHTML = `
-    <div class="row justify-content-right">
+    <div class="row justify-content-center">
       <div class="card" style="margin-left: 1rem; margin-right: 1 rem;">
         <div class="card-body">
             <img src="${character.image}" alt="${character.name}" class="character" />
