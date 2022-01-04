@@ -34,6 +34,18 @@ function promise_hit (size){
   })
 }
 
+function async_hit (size){
+  clean();
+  (async function fetchDataAsync() {
+    const data = await fetchData(idgenerator(size));
+  
+    data.map(character => {
+      const card = buildCard(character);
+      cards_container.appendChild(card);
+    });
+  })();
+}
+
 function idgenerator(howmany){
   // console.log("entro")
   var idlist = []
