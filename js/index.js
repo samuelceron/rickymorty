@@ -7,7 +7,8 @@ const api = 'https://rickandmortyapi.com/api/character/';
 
 
 document.getElementById("callback").addEventListener("click",function(){callback_hit(10)});
-document.getElementById("asyncawait").addEventListener("click",function(){asyn_hit(10)});
+document.getElementById("promises").addEventListener("click",function(){promise_hit(10)});
+document.getElementById("asyncawait").addEventListener("click",function(){async_hit(10)});
 
 function callback_hit (size){
   // console.log("entro aqui")
@@ -22,7 +23,16 @@ function callback_hit (size){
   });
 };
 
-
+function promise_hit (size){
+  clean();
+  fetchData(idgenerator(size))
+  .then(data=>{
+    data.map(character=>{
+      const card = buildCard(character);
+      cards_container.appendChild(card);
+    })
+  })
+}
 
 function idgenerator(howmany){
   // console.log("entro")

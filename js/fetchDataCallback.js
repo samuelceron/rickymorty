@@ -20,6 +20,6 @@ export const fetchDataCallback = (url_api, callback) => {
             }
         }
     };
-    //seng the petition
+    //send the petition
     xhttp.send();
 };
