@@ -41,10 +41,17 @@
 
     <div class="jumbotron">
       <h1 class="display-4">Rick&Morty | Random Characters</h1>
-      <p class="lead">Consult Rick & Morty API with different asynchronous JavaScript techniques you'll encounter, showing how they can help us solve such problems. </p>
+      <p class="lead">Consult Rick & Morty API with different asynchronous JavaScript techniques you'll encounter,
+        showing how they can help us solve such problems. </p>
+      <hr class="my-1">
+      <p style="text-align: center;">How many characters are you looking for?</p>
+      <div id="slider_container" class="d-flex justify-content-center">
+        <!-- <input type="range" value="1" min="1" max="875" oninput="this.nextElementSibling.value = this.value">
+        <output id="output">1</output> -->
+      </div>
       <hr class="my-1">
       <p style="text-align: center;">Choose one of this methods to hit the Rick and Morty API:</p>
-      <div class="d-flex justify-content-around">
+      <div class="d-flex justify-content-center">
         <div class="btn-group" role="group" aria-label="...">
           <button id="callback" stype="button" class="btn btn-dark">Callbacks</button>
           <button id="asyncawait" type="button" class="btn btn-dark ">Async/Await</button>
@@ -54,7 +61,7 @@
     </div>
   </header>
   <div id="cards_container" class="row justify-content-center">
-    
+
   </div>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
